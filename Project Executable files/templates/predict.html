@@ -1,0 +1,86 @@
+User
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+    <style>
+        body {
+            background-image: url('static/fraud_temp.jpg'); 
+            background-size: cover;
+            color: whitesmoke;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(23, 173, 218, 0.8); /* Adjust the opacity as needed */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>ENTER DATA TO PREDICT FRAUD TRANSACTION!!!</center></h1>
+    <div class="container">
+        <form action="/submit_values" method="post" align="left">
+            <label for="step">Step:</label><br>
+            <input type="number" id="step" name="step" step="any" required><br>
+
+            <label for="type">Type:</label><br>
+            <input type="number" id="type" name="type" step="any" value="0"><br>
+
+            <label for="amount">Amount:</label><br>
+            <input type="number" id="amount" name="amount" step="any" required><br>
+
+            <label for="nameOrig">Name Orig:</label><br>
+            <input type="number" id="nameOrig" name="nameOrig" step="any" value="0"><br>
+
+            <label for="oldbalanceOrg">Old Balance Org:</label><br>
+            <input type="number" id="oldbalanceOrg" name="oldbalanceOrg" step="any" required><br>
+
+            <label for="newbalanceOrig">New Balance Orig:</label><br>
+            <input type="number" id="newbalanceOrig" name="newbalanceOrig" step="any" required><br>
+
+            <label for="nameDest">Name Dest:</label><br>
+            <input type="number" id="nameDest" name="nameDest" step="any" value="0"><br>
+
+            <label for="oldbalanceDest">Old Balance Dest:</label><br>
+            <input type="number" id="oldbalanceDest" name="oldbalanceDest" step="any" required><br>
+
+            <label for="newbalanceDest">New Balance Dest:</label><br>
+            <input type="number" id="newbalanceDest" name="newbalanceDest" step="any" value="0"><br>
+
+            <label for="isFraud">Is Fraud:</label><br>
+            <input type="number" id="isFraud" name="isFraud" step="any" value="0"><br>
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form> 
+    </div>
+</body>
+</html>
